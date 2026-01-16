@@ -1,23 +1,20 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:TC-{product}-{#####}",
- "creation": "2026-01-13 16:42:31.675994",
+ "autoname": "format:TP-{product}-{#####}",
+ "creation": "2026-01-16 11:38:25.606261",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_bnhd",
+  "section_break_b0m7",
   "project",
   "product",
   "title",
-  "pre_condition",
-  "steps_to_reproduce",
-  "expected_result",
-  "amended_from"
+  "test_cases"
  ],
  "fields": [
   {
-   "fieldname": "section_break_bnhd",
+   "fieldname": "section_break_b0m7",
    "fieldtype": "Section Break"
   },
   {
@@ -39,38 +36,24 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Title",
    "reqd": 1
   },
   {
-   "fieldname": "pre_condition",
-   "fieldtype": "Text",
-   "label": "Pre Condition"
-  },
-  {
-   "fieldname": "steps_to_reproduce",
-   "fieldtype": "Text",
-   "label": "Steps to Reproduce"
-  },
-  {
-   "fieldname": "expected_result",
-   "fieldtype": "Text",
-   "label": "Expected Result"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "options": "Test Case"
+   "fieldname": "test_cases",
+   "fieldtype": "Table MultiSelect",
+   "label": "Test cases",
+   "options": "Test Case Holder"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-16 12:03:33.203156",
+ "modified": "2026-01-16 11:41:02.172229",
  "modified_by": "Administrator",
  "module": "Zentestic",
- "name": "Test Case",
+ "name": "Test Plan",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
