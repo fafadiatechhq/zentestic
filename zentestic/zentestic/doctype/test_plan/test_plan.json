@@ -11,7 +11,8 @@
   "product",
   "title",
   "test_cases",
-  "test_plan_participant"
+  "participants",
+  "allocation_strategy"
  ],
  "fields": [
   {
@@ -48,16 +49,23 @@
    "options": "Test Case Holder"
   },
   {
-   "fieldname": "test_plan_participant",
+   "fieldname": "allocation_strategy",
+   "fieldtype": "Select",
+   "in_preview": 1,
+   "label": "Allocation Strategy",
+   "options": "Round Robin\nRandom"
+  },
+  {
+   "fieldname": "participants",
    "fieldtype": "Table",
-   "label": "participants",
+   "label": "Participants",
    "options": "Test Plan Participant"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-17 17:19:06.667855",
+ "modified": "2026-02-18 11:11:18.058983",
  "modified_by": "Administrator",
  "module": "Zentestic",
  "name": "Test Plan",
