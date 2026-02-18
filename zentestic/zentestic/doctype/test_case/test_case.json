@@ -1,15 +1,16 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:TC-{product}-{#####}",
  "creation": "2026-01-13 16:42:31.675994",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "title",
   "section_break_bnhd",
   "project",
   "product",
-  "title",
   "pre_condition",
   "steps_to_reproduce",
   "expected_result",
@@ -39,12 +40,13 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Title",
    "reqd": 1
   },
   {
    "fieldname": "pre_condition",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "label": "Pre Condition"
   },
   {
@@ -54,7 +56,7 @@
   },
   {
    "fieldname": "expected_result",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "label": "Expected Result"
   },
   {
@@ -67,7 +69,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-16 12:03:33.203156",
+ "modified": "2026-01-19 11:02:54.886609",
  "modified_by": "Administrator",
  "module": "Zentestic",
  "name": "Test Case",
@@ -89,7 +91,9 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "title"
 }

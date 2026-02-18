@@ -10,7 +10,8 @@
   "project",
   "product",
   "title",
-  "test_cases"
+  "test_cases",
+  "test_plan_participant"
  ],
  "fields": [
   {
@@ -42,15 +43,21 @@
   },
   {
    "fieldname": "test_cases",
-   "fieldtype": "Table MultiSelect",
+   "fieldtype": "Table",
    "label": "Test cases",
    "options": "Test Case Holder"
+  },
+  {
+   "fieldname": "test_plan_participant",
+   "fieldtype": "Table",
+   "label": "participants",
+   "options": "Test Plan Participant"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-16 11:41:02.172229",
+ "modified": "2026-02-17 17:19:06.667855",
  "modified_by": "Administrator",
  "module": "Zentestic",
  "name": "Test Plan",
@@ -72,7 +79,9 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "title"
 }

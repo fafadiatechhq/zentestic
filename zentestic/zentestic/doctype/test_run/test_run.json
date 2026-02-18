@@ -31,7 +31,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Pending\nPass\nFail\nBlock"
+   "options": "\nActive\nIn-active\nCompleted\nClosed\nRetest"
   },
   {
    "fieldname": "test_plan",
@@ -57,7 +57,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-16 14:39:59.657767",
+ "modified": "2026-02-17 10:36:54.328592",
  "modified_by": "Administrator",
  "module": "Zentestic",
  "name": "Test Run",
@@ -79,7 +79,9 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "title"
 }
