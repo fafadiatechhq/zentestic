@@ -59,13 +59,14 @@
    "fieldname": "participants",
    "fieldtype": "Table",
    "label": "Participants",
-   "options": "Test Plan Participant"
+   "options": "Test Plan Participant",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-18 11:11:18.058983",
+ "modified": "2026-02-18 11:29:16.434297",
  "modified_by": "Administrator",
  "module": "Zentestic",
  "name": "Test Plan",
