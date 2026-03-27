@@ -1,0 +1,54 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"OaQRVrGd_X\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Zentestic</span>\",\"col\":12}},{\"id\":\"hUEz_gAT2c\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h5\\\">Manage</span>\",\"col\":12}},{\"id\":\"BpjP6QhVOa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Test Cases\",\"col\":3}},{\"id\":\"JlRp85IMjA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Test Plan\",\"col\":3}},{\"id\":\"wgRPjAJZgd\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h5\\\">Review</span>\",\"col\":12}},{\"id\":\"itNyMboKHZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Test Run\",\"col\":3}}]",
+ "creation": "2026-03-27 14:17:44.590932",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "milestone",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Zentestic",
+ "links": [],
+ "modified": "2026-03-27 14:35:47.883967",
+ "modified_by": "Administrator",
+ "module": "Zentestic",
+ "name": "Zentestic",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Test Cases",
+   "link_to": "Test Case",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Test Plan",
+   "link_to": "Test Plan",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Test Run",
+   "link_to": "Test Run",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Zentestic"
+}
