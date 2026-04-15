@@ -7,8 +7,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "title",
   "section_break_bnhd",
+  "title",
   "project",
   "product",
   "pre_condition",
@@ -41,7 +41,7 @@
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Title",
+   "label": "Title ",
    "reqd": 1
   },
   {
@@ -69,7 +69,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 11:02:54.886609",
+ "modified": "2026-03-27 16:43:21.792204",
  "modified_by": "Administrator",
  "module": "Zentestic",
  "name": "Test Case",
@@ -95,5 +95,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "title"
+ "title_field": "product"
 }
