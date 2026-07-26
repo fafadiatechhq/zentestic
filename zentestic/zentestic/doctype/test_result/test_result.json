@@ -45,16 +45,22 @@
    "options": "User"
   },
   {
+   "fetch_from": "test_case.pre_condition",
+   "fetch_if_empty": 1,
    "fieldname": "pre_condition",
    "fieldtype": "Text",
    "label": "Pre condition"
   },
   {
+   "fetch_from": "test_case.steps_to_reproduce",
+   "fetch_if_empty": 1,
    "fieldname": "steps_to_produce",
    "fieldtype": "Text",
    "label": "Steps to Reproduce"
   },
   {
+   "fetch_from": "test_case.expected_result",
+   "fetch_if_empty": 1,
    "fieldname": "expected_result",
    "fieldtype": "Text",
    "label": "Expected Result"

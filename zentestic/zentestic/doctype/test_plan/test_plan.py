@@ -1,58 +1,62 @@
 import frappe
 from frappe.model.document import Document
-from frappe.utils import now_datetime
 import random
+
+from zentestic.zentestic.doctype.test_run.test_run import get_test_case_snapshot
+
 
 class TestPlan(Document):
 
-    @frappe.whitelist()
-    def start_test_run(self):
+	@frappe.whitelist()
+	def start_test_run(self):
 
-        # --------------------
-        # 1️⃣ Basic Validation
-        # --------------------
-        if not self.test_cases:
-            frappe.throw("Please add Test Cases.")
+		# --------------------
+		# 1. Basic Validation
+		# --------------------
+		if not self.test_cases:
+			frappe.throw("Please add Test Cases.")
 
-        if not self.participants:
-            frappe.throw("Please add Participants.")
+		if not self.participants:
+			frappe.throw("Please add Participants.")
 
-        # --------------------
-        # 2️⃣ Create Test Run
-        # --------------------
-        test_run = frappe.new_doc("Test Run")
-        test_run.test_plan = self.name
-        test_run.project = self.project
-        test_run.product = self.product
-        test_run.status = "In Progress"
-        test_run.insert(ignore_permissions=True)
+		# --------------------
+		# 2. Create Test Run
+		# --------------------
+		test_run = frappe.new_doc("Test Run")
+		test_run.test_plan = self.name
+		test_run.project = self.project
+		test_run.product = self.product
+		test_run.status = "In Progress"
 
-        participants = [p.user for p in self.participants]
-        total_participants = len(participants)
+		participants = [p.user for p in self.participants]
+		total_participants = len(participants)
 
-        # --------------------
-        # 3️⃣ Apply Strategy
-        # --------------------
+		# --------------------
+		# 3. Apply Strategy
+		# --------------------
 
-        if self.allocation_strategy == "Random":
-            random.shuffle(participants)
+		if self.allocation_strategy == "Random":
+			random.shuffle(participants)
 
-        allocation_index = 0
+		allocation_index = 0
 
-        for row in self.test_cases:
+		for row in self.test_cases:
+			assignee = participants[allocation_index]
+			snapshot = get_test_case_snapshot(row.test_case)
 
-            assignee = participants[allocation_index]
+			test_run.append(
+				"test_results",
+				{
+					"test_case": row.test_case,
+					"assignee": assignee,
+					"status": "Pending",
+					**snapshot,
+				},
+			)
 
-            frappe.get_doc({
-                "doctype": "Test Result",
-                "title": row.test_case,
-                "test_run": test_run.name,
-                "test_case": row.test_case,
-                "assignee": assignee,
-                "status": "Pending"
-            }).insert(ignore_permissions=True)
+			# Round Robin rotation
+			allocation_index = (allocation_index + 1) % total_participants
 
-            # Round Robin rotation
-            allocation_index = (allocation_index + 1) % total_participants
+		test_run.insert(ignore_permissions=True)
 
-        return test_run.name
+		return test_run.name
