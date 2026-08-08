@@ -1,6 +1,8 @@
 # Zentestic
 
-![Zentestic](logo.png)
+<p align="center">
+  <img src="logo.png" alt="Zentestic">
+</p>
 
 Zentestic is a Test Case Management System that helps QA teams efficiently plan, execute, and track testing cycles. It centralizes test cases, improves collaboration, and provides clear visibility into testing progress to ensure high-quality software delivery.
 
