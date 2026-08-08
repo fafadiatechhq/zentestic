@@ -34,12 +34,13 @@ If login or the API fails with `Access denied for user '_…'@'<container-ip>'`,
 
 Creates a comprehensive demo graph for local QA / UI testing:
 
-- **Users:** QA lead, 2 testers, stakeholder (`*@zentestic.demo`)
-- **Projects:** `Zentestic Demo`, `Mobile App QA`
-- **Products:** Billing Portal, Customer Portal, iOS Companion App
-- **Test Plans:** Round Robin + Random allocation
-- **Test Runs:** Draft, In Progress, Completed, and Retest (Fail/Blocked carry-forward)
-- **Results:** Pending, Pass, Fail, Blocked, Retest, In progress — with snapshots / actual results
+- **Users:** QA lead, 3 testers, Android tester, stakeholder, product owner (`*@zentestic.demo`)
+- **Projects:** `Zentestic Demo`, `Mobile App QA`, `Platform API QA`
+- **Products:** Billing Portal, Customer Portal, Admin Console, Internal Tools (no plans), iOS / Android Companion App, Payments API, Notifications Service
+- **Test Plans:** Round Robin + Random; 1–4 participants; plans with no runs yet (ready to start in UI)
+- **Test Runs:** Draft, In Progress, Completed; in-progress / completed / chained retests (Fail/Blocked carry-forward)
+- **Results:** Pending, Pass, Fail, Blocked, Retest, In progress — with snapshots, actual results, and explicit assignees
+- **Edge cases:** minimal test case (title only), unplanned backlog cases, single-participant plans, 100% all-pass runs
 
 ```bash
 # Local bench
